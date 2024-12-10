@@ -76,7 +76,7 @@ def play():
     data = request.json
     row, col = data['row'], data['col']
     if board[row][col] != EMPTY:
-        return jsonify({'error': 'Cell already occupied'}), 400
+        return jsonify({'error': 'cell already occupied'}), 400
 
     board[row][col] = 'X'
     if check_winner(board) == 'X':
